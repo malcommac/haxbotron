@@ -111,7 +111,7 @@ var scheduledTimer5 = setInterval(() => {
         }
 
         // when afk too long kick option is enabled, then check sleeping with afk command and kick if afk too long
-        if (window.gameRoom.config.settings.afkCommandAutoKick === true && player.permissions.afkmode === true && nowTimeStamp > player.permissions.afkdate + window.gameRoom.config.settings.afkCommandAutoKickAllowMillisecs) {
+        /*if (window.gameRoom.config.settings.afkCommandAutoKick === true && player.permissions.afkmode === true && nowTimeStamp > player.permissions.afkdate + window.gameRoom.config.settings.afkCommandAutoKickAllowMillisecs) {
             window.gameRoom._room.kickPlayer(player.id, Tst.maketext(LangRes.scheduler.afkCommandTooLongKick, placeholderScheduler), false); // kick
         }
 
@@ -138,7 +138,7 @@ var scheduledTimer5 = setInterval(() => {
                     player.afktrace.count++; // add afk detection count
                 }
             }
-        }
+        }*/
     });
 }, 5000); // 5secs
 // ====================================================================================================
