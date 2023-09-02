@@ -1,10 +1,10 @@
 {
 	"ruid": "haxbotron-room-default",
 	"_config": {
-		"roomName": "Play with 𝙃𝙖𝙭𝙗𝙤𝙩𝙧𝙤𝙣 🤖",
+		"roomName": "Immo ⚽️",
 		"playerName": "🤖",
 		"password": "",
-		"maxPlayers": 12,
+		"maxPlayers": 20,
 		"public": true,
 		"token": "",
 		"noPlayer": true
@@ -16,7 +16,7 @@
 		"banVoteAllowMinimum": 10,
 		"banVoteExecuteMinimum": 7,
 		"afkCountLimit": 3,
-		"afkCommandAutoKick": true,
+		"afkCommandAutoKick": false,
 		"afkCommandAutoKickAllowMillisecs": 120000,
 		"chatFiltering": true,
 		"antiJoinFlood": true,
@@ -37,7 +37,7 @@
 		"playerKickAllowLimitation": 2,
 		"playerKickIntervalMillisecs": 30000,
 		"playerKickAbusingBanMillisecs": 300000,
-		"antiAFKFlood": true,
+		"antiAFKFlood": false,
 		"antiAFKAbusing": true,
 		"antiMuteAbusing": true,
 		"muteAllowIntervalMillisecs": 180000,
@@ -49,28 +49,28 @@
 		"rerollWinstreakCriterion": 5,
 		"guaranteePlayingTime": true,
 		"guaranteedPlayingTimeSeconds": 20,
-		"avatarOverridingByTier": true,
+		"avatarOverridingByTier": false,
 		"nicknameLengthLimit": 12,
-		"chatLengthLimit": 80,
+		"chatLengthLimit": 200,
 		"forbidDuplicatedNickname": true,
-		"nicknameTextFilter": true,
-		"chatTextFilter": true
+		"nicknameTextFilter": false,
+		"chatTextFilter": false
 	},
 	"rules": {
 		"ruleName": "default-rule",
 		"ruleDescription": "this is default rule. (Auto+Relay+Shuffle)",
 		"requisite": {
-			"minimumPlayers": 8,
-			"eachTeamPlayers": 4,
-			"timeLimit": 3,
-			"scoreLimit": 3,
-			"teamLock": true
+			"minimumPlayers": 2,
+			"eachTeamPlayers": 1,
+			"timeLimit": 7,
+			"scoreLimit": 5,
+			"teamLock": false
 		},
-		"autoAdmin": false,
+		"autoAdmin": true,
 		"autoOperating": true,
 		"statsRecord": true,
-		"defaultMapName": "gbhothuge",
-		"readyMapName": "gbtraining"
+		"defaultMapName": "immo",
+		"readyMapName": "immo"
 	},
 	"helo": {
 		"factor": {
