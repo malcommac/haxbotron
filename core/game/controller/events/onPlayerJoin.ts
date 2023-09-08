@@ -45,7 +45,7 @@ export async function onPlayerJoinListener(player: PlayerObject): Promise<void> 
     if (playerBanChecking !== undefined) {// if banned (bListCheck would had returned string or boolean)
         placeholderJoin.banListReason = playerBanChecking.reason;
 
-        if (playerBanChecking.expire == -1) { // Permanent ban
+        /*if (playerBanChecking.expire == -1) { // Permanent ban
             window.gameRoom.logger.i('onPlayerJoin', `${player.name}#${player.id} was joined but kicked for registered in permanent ban list. (conn:${player.conn},reason:${playerBanChecking.reason})`);
             window.gameRoom._room.kickPlayer(player.id, Tst.maketext(LangRes.onJoin.banList.permanentBan, placeholderJoin), true); // auto ban
             return;
@@ -60,16 +60,17 @@ export async function onPlayerJoinListener(player: PlayerObject): Promise<void> 
             window.gameRoom.logger.i('onPlayerJoin', `${player.name}#${player.id} is deleted from the ban list because the date has expired. (conn:${player.conn},reason:${playerBanChecking.reason})`);
             await removeBanlistDataFromDB(player.conn);
             // window.room.clearBan(player.id); //useless cuz banned player in haxball couldn't make join-event.
-        }
+        }*/
     }
 
     // if this player use seperator (|,|) in nickname, then kick
-    if (player.name.includes('|,|')) {
+    /*if (player.name.includes('|,|')) {
         window.gameRoom.logger.i('onPlayerJoin', `${player.name}#${player.id} was joined but kicked for including seperator word. (|,|)`);
         window.gameRoom._room.kickPlayer(player.id, Tst.maketext(LangRes.onJoin.includeSeperator, placeholderJoin), false); // kick
         return;
-    }
+    }*/
     
+    /*
     // if this player has already joinned by other connection
     for (let eachPlayer of window.gameRoom.playerList.values()) {
         if(eachPlayer.conn === player.conn) {
@@ -78,7 +79,7 @@ export async function onPlayerJoinListener(player: PlayerObject): Promise<void> 
             //window.room.sendAnnouncement(Tst.maketext(LangRes.onJoin.doubleJoinningMsg, placeholderJoin), null, 0xFF0000, "normal", 0); // notify
             return; // exit from this join event
         }
-    }
+    }*/
 
     // if player's nickname is longer than limitation
     if (player.name.length > window.gameRoom.config.settings.nicknameLengthLimit) {

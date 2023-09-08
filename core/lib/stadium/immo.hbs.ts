@@ -1,7 +1,7 @@
 export var stadiumText: string = `
 {
 
-	"name" : "Immo Big Field",
+	"name" : "Immo's",
 
 	"width" : 1024,
 
@@ -9,7 +9,7 @@ export var stadiumText: string = `
 
 	"spawnDistance" : 200,
 
-	"bg" : { "type" : "hockey", "width" : 950, "height" : 443, "kickOffRadius" : 80, "cornerRadius" : 0 },
+	"bg" : { "type" : "none", "width" : 950, "height" : 443, "kickOffRadius" : 80, "cornerRadius" : 0, "color" : "2b6482"  },
 
 	"vertexes" : [
 		/* 0 */ { "x" : -949, "y" : 443, "trait" : "ballArea", "bCoef" : 1 },
@@ -20,6 +20,7 @@ export var stadiumText: string = `
 		/* 5 */ { "x" : 916, "y" : 94, "trait" : "ballArea", "color" : "ffffff", "vis" : true },
 		/* 6 */ { "x" : 916, "y" : -106, "trait" : "ballArea", "vis" : true, "color" : "ffffff" },
 		
+        // Barriera calcio d'inizo
 		/* 7 */ { "x" : 0, "y" : 442, "trait" : "kickOffBarrier", "vis" : true, "color" : "ffffff" },
 		/* 8 */ { "x" : 0, "y" : 80, "trait" : "kickOffBarrier", "vis" : true, "color" : "ffffff" },
 		/* 9 */ { "x" : 0, "y" : -80, "trait" : "kickOffBarrier", "vis" : true, "color" : "ffffff" },
@@ -78,7 +79,22 @@ export var stadiumText: string = `
 		/* 58 */ { "x" : -916, "y" : 101, "cMask" : ["wall" ], "cGroup" : ["all" ], "curve" : 0, "color" : "ffffff" },
 		/* 59 */ { "x" : -916, "y" : -99, "cMask" : ["wall" ], "cGroup" : ["all" ], "curve" : 0, "color" : "ffffff" },
 		/* 60 */ { "x" : 915, "y" : 101, "cMask" : ["wall" ], "cGroup" : ["all" ], "curve" : 0, "color" : "ffffff", "_selected" : true },
-		/* 61 */ { "x" : 915, "y" : -99, "cMask" : ["wall" ], "cGroup" : ["all" ], "curve" : 0, "color" : "ffffff", "_selected" : true }
+		/* 61 */ { "x" : 915, "y" : -99, "cMask" : ["wall" ], "cGroup" : ["all" ], "curve" : 0, "color" : "ffffff", "_selected" : true },
+
+		/* 62 */ { "x" : 0, "y" : -60, "color" : "ffffff", "cMask": ["c0"] },
+		/* 63 */ { "x" : -60, "y" : 0, "color" : "ffffff", "cMask": ["c0"] },
+		/* 64 */ { "x" : 0, "y" : -60, "color" : "ffffff", "cMask": ["c0"] },
+		/* 65 */ { "x" : 60, "y" : 0, "color" : "ffffff", "cMask": ["c0"] },
+		/* 66 */ { "x" : -30, "y" : 0, "color" : "ffffff", "cMask": ["c0"] },
+		/* 67 */ { "x" : 30, "y" : 0, "color" : "ffffff", "cMask": ["c0"]},
+		/* 68 */ { "x" : -25, "y" : 60, "color" : "ffffff", "cMask": ["c0"] },
+		/* 69 */ { "x" : 25, "y" : 60, "color" : "ffffff", "cMask": ["c0"] },
+		/* 70 */ { "x" : -10, "y" : 60, "color" : "ffffff", "cMask": ["c0"] },
+		/* 71 */ { "x" : 10, "y" : 60, "color" : "ffffff", "cMask": ["c0"] },
+		/* 72 */ { "x" : -10, "y" : 13, "color" : "ffffff", "cMask": ["c0"] },
+		/* 73 */ { "x" : -10, "y" : 13, "color" : "ffffff", "cMask": ["c0"] },
+		/* 74 */ { "x" : 10, "y" : 60, "color" : "ffffff", "cMask": ["c0"] },
+		/* 75 */ { "x" : 10, "y" : 13, "color" : "ffffff", "cMask": ["c0"] }
 
 	],
 
@@ -89,7 +105,8 @@ export var stadiumText: string = `
 		{ "v0" : 15, "v1" : 16, "curve" : 90, "trait" : "goalNet" },
 		{ "v0" : 16, "v1" : 17, "trait" : "goalNet" },
 		{ "v0" : 17, "v1" : 18, "curve" : 90, "trait" : "goalNet" },
-		
+
+        // Barriera calcio d'inizio
 		{ "v0" : 7, "v1" : 8, "trait" : "kickOffBarrier", "vis" : true, "color" : "ffffff" },
 		{ "v0" : 8, "v1" : 9, "curve" : 180, "cGroup" : ["blueKO" ], "trait" : "kickOffBarrier", "vis" : true, "color" : "ffffff" },
 		{ "v0" : 8, "v1" : 9, "curve" : -180, "cGroup" : ["redKO" ], "trait" : "kickOffBarrier", "vis" : true, "color" : "ffffff" },
@@ -104,7 +121,19 @@ export var stadiumText: string = `
 		{ "vis" : true, "v0" : 54, "v1" : 55, "color" : "ffffff", "trait" : "ballArea" },
 		
 		{ "v0" : 59, "v1" : 58, "curve" : 0, "vis" : true, "color" : "ffffff", "cMask" : ["wall" ], "cGroup" : ["all" ] },
-		{ "v0" : 61, "v1" : 60, "curve" : 0, "vis" : true, "color" : "ffffff", "cMask" : ["wall" ], "cGroup" : ["all" ], "_selected" : true, "x" : 915 }
+		{ "v0" : 61, "v1" : 60, "curve" : 0, "vis" : true, "color" : "ffffff", "cMask" : ["wall" ], "cGroup" : ["all" ], "_selected" : true, "x" : 915 },
+
+		{ "v0" : 62, "v1" : 63, "color" : "ffffff", "cMask": ["c0"] },
+		{ "v0" : 64, "v1" : 65, "color" : "ffffff", "cMask": ["c0"] },
+		{ "v0" : 63, "v1" : 66, "color" : "ffffff", "cMask": ["c0"] },
+		{ "v0" : 65, "v1" : 67, "color" : "ffffff", "cMask": ["c0"] },
+		{ "v0" : 66, "v1" : 68, "color" : "ffffff", "cMask": ["c0"] },
+		{ "v0" : 67, "v1" : 69, "color" : "ffffff", "cMask": ["c0"] },
+		{ "v0" : 68, "v1" : 70, "color" : "ffffff", "cMask": ["c0"] },
+		{ "v0" : 69, "v1" : 71, "color" : "ffffff", "cMask": ["c0"] },
+		{ "v0" : 70, "v1" : 72, "color" : "ffffff", "cMask": ["c0"] },
+		{ "v0" : 71, "v1" : 75, "color" : "ffffff", "cMask": ["c0"] },
+		{ "v0" : 72, "v1" : 75, "color" : "ffffff", "cMask": ["c0"] }
 
 	],
 
@@ -167,7 +196,7 @@ export var stadiumText: string = `
 		"bCoef" : 0.6,
 		"invMass" : 1,
 		"damping" : 0.99,
-		"color" : "5df542"
+		"color" : "E1F56E"
 
 	}
 }
